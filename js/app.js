@@ -92,11 +92,11 @@
     var button = document.getElementById("dlButton");
     var heroBtn = document.getElementById("heroDownload");
 
-    // Prefer the portable exe asset; fall back to the release page.
+    // Prefer the installer, then the portable build; else the release page.
     var assets = release.assets || [];
     var exe = assets.find(function (a) {
-      return /foxfall.*\.exe$/i.test(a.name) && !/setup/i.test(a.name);
-    }) || assets.find(function (a) { return /\.exe$/i.test(a.name); });
+      return /foxfall-setup.*\.exe$/i.test(a.name);
+    }) || assets.find(function (a) { return /foxfall-portable.*\.exe$/i.test(a.name); }) || assets.find(function (a) { return /\.exe$/i.test(a.name); });
 
     if (exe && exe.browser_download_url) {
       if (button) {

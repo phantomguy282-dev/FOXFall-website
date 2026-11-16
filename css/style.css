@@ -238,3 +238,10 @@ body {
   .reveal { opacity: 1; transform: none; transition: none; }
   .btn, .card { transition: none; }
 }
+/* ---------- app screenshot ---------- */
+.screenshot { margin-top: 28px; text-align: center; }
+.screenshot img {
+  max-width: 100%; border-radius: 16px;
+  border: 1px solid rgba(242,140,40,.35);
+  box-shadow: 0 24px 70px rgba(0,0,0,.55);
+}
