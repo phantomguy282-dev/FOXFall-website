@@ -1,0 +1,5 @@
+# FOXFall website — allow all crawlers
+User-agent: *
+Allow: /
+
+Sitemap: https://phantomguy282-dev.github.io/FOXFall-website/sitemap.xml
